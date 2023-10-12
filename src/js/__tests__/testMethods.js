@@ -6,7 +6,7 @@ describe('Character levelUp method', () => {
     character.health = 0;
     expect(() => character.levelUp()).toThrowError('Нельзя повысить уровень умершего персонажа');
   });
-  
+
   test('should increase level by 1', () => {
     const character = new Character('Test', 'Swordsman');
     character.levelUp();
