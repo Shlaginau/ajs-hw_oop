@@ -1,6 +1,12 @@
 import Character from '../Character';
 
 describe('Character levelUp method', () => {
+  test('should throw an error if health is 0', () => {
+    const character = new Character('Test', 'Swordsman');
+    character.health = 0;
+    expect(() => character.levelUp()).toThrowError('Нельзя повысить уровень умершего персонажа');
+  });
+  
   test('should increase level by 1', () => {
     const character = new Character('Test', 'Swordsman');
     character.levelUp();
@@ -21,12 +27,6 @@ describe('Character levelUp method', () => {
     character.damage(50);
     character.levelUp();
     expect(character.health).toBe(100);
-  });
-
-  test('should throw an error if health is 0', () => {
-    const character = new Character('Test', 'Swordsman');
-    character.health = 0;
-    expect(() => character.levelUp()).toThrowError('Нельзя повысить уровень умершего персонажа');
   });
 });
 
