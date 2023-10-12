@@ -1,4 +1,4 @@
-
+[![Build status](https://ci.appveyor.com/api/projects/status/ogmmvv6r9fxq62fc?svg=true)](https://ci.appveyor.com/project/Shlaginau/ajs-hw-oop)
 
 # Домашнее задание к лекции «Классы, наследование»
 
